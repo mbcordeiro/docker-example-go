@@ -1,0 +1,13 @@
+version: '3'
+
+services: 
+  nginx:
+    image: ngix
+    volumes: 
+      - ./nginx:/usr/share/nginx/html/
+    ports: 
+      - 8088:80
+    redis:
+      image: redis
+      expose: 
+        - 6379
